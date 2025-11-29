@@ -94,7 +94,7 @@ WindUI:Popup({
             Title = 'Copy',
             Icon = '',
             Callback = function()
-                setclipboard('skidz on top lol')
+                setclipboard('davi o top dos top')
                 Confirmed = true
             end,
             Variant = 'Primary',
@@ -879,7 +879,7 @@ Tabs.FarmingTab:Button({
         if not game:IsLoaded() then game.Loaded:Wait() end
         
         -- Delete old UI if exists
-        if LocalPlayer.PlayerGui:FindFirstChild("SkidSource_FarmUI") then
+        if LocalPlayer.PlayerGui:FindFirstChild("davizin_FarmUI") then
             LocalPlayer.PlayerGui.SkidSource_FarmUI:Destroy()
         end
 
@@ -888,7 +888,7 @@ Tabs.FarmingTab:Button({
 
         -- Create farming UI
         local gui = Instance.new("ScreenGui")
-        gui.Name = "SkidSource_FarmUI"
+        gui.Name = "Davizin_FarmUI"
         gui.ResetOnSpawn = false
         gui.Parent = LocalPlayer.PlayerGui
 
@@ -915,7 +915,7 @@ Tabs.FarmingTab:Button({
         title.Size = UDim2.new(1, 0, 0, 40)
         title.Position = UDim2.new(0, 0, 0, 10)
         title.BackgroundTransparency = 1
-        title.Text = "SkidSource Auto Farm"
+        title.Text = "davizim Auto Farm"
         title.TextColor3 = Color3.new(1,1,1)
         title.Font = Enum.Font.FredokaOne
         title.TextSize = 20
@@ -1119,7 +1119,7 @@ Tabs.SettingsTab:Button({
             XRay = xRay
         }
         
-        writefile("skidsource_config_" .. configName .. ".json", Services.HttpService:JSONEncode(configData))
+        writefile("davihub_config_" .. configName .. ".json", Services.HttpService:JSONEncode(configData))
         
         WindUI:Notify({
             Title = "Config Saved",
@@ -1132,7 +1132,7 @@ Tabs.SettingsTab:Button({
 Tabs.SettingsTab:Button({
     Title = '📂 Load Config',
     Callback = function()
-        if isfile("skidsource_config_" .. configName .. ".json") then
+        if isfile("davihub_config_" .. configName .. ".json") then
             local configData = Services.HttpService:JSONDecode(readfile("skidsource_config_" .. configName .. ".json"))
             
             -- Apply loaded settings
@@ -1165,7 +1165,7 @@ Window:UnlockAll()
 
 Window:OnClose(function()
     WindUI:Notify({
-        Title = "SkidSource",
+        Title = "davihub",
         Content = "UI hidden! Press RightControl to reopen.",
         Duration = 3
     })
@@ -1173,7 +1173,7 @@ end)
 
 Window:OnOpen(function()
     WindUI:Notify({
-        Title = "SkidSource",
+        Title = "davihub",
         Content = "Enhanced UI loaded successfully!",
         Duration = 3
     })
@@ -1182,18 +1182,18 @@ end)
 -- Auto-execute saved settings
 spawn(function()
     wait(3)
-    if isfile("skidsource_config_default.json") then
-        local configData = Services.HttpService:JSONDecode(readfile("skidsource_config_default.json"))
+    if isfile("davihub_config_default.json") then
+        local configData = Services.HttpService:JSONDecode(readfile("davihub_config_default.json"))
         -- Apply default config if exists
         WindUI:Notify({
-            Title = "SkidSource",
+            Title = "davihub",
             Content = "Default configuration applied!",
             Duration = 3
         })
     end
 end)
 
-print("🎮 SkidSource hehe skid skid")--found this source and i edited it, credits to the owner.
+print("🎮 davizin Hub")--found this source and i edited it, credits to the owner.
  
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
@@ -2074,7 +2074,7 @@ Tabs.FarmingTab:Button({
         if not game:IsLoaded() then game.Loaded:Wait() end
         
         -- Delete old UI if exists
-        if LocalPlayer.PlayerGui:FindFirstChild("SkidSource_FarmUI") then
+        if LocalPlayer.PlayerGui:FindFirstChild("davizin_FarmUI") then
             LocalPlayer.PlayerGui.SkidSource_FarmUI:Destroy()
         end
 
@@ -2083,7 +2083,7 @@ Tabs.FarmingTab:Button({
 
         -- Create farming UI
         local gui = Instance.new("ScreenGui")
-        gui.Name = "SkidSource_FarmUI"
+        gui.Name = "davizin_FarmUI"
         gui.ResetOnSpawn = false
         gui.Parent = LocalPlayer.PlayerGui
 
