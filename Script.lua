@@ -116,10 +116,10 @@ until Confirmed
 
 -- Create enhanced window
 local Window = WindUI:CreateWindow({
-    Title = 'SkidSource',
+    Title = 'davi UI',
     Icon = 'door-open',
-    Author = 'edited by skidzhub :)',
-    Folder = 'SkidSource',
+    Author = 'edited by davizin hub :)',
+    Folder = 'dvi Ui',
 
     -- Enhanced settings
     Size = UDim2.fromOffset(600, 500),
