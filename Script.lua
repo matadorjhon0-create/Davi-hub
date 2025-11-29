@@ -1923,7 +1923,7 @@ Tabs.VisualsTab:Toggle({
 Tabs.VisualsTab:Slider({
     Title = '🎯 Field of View',
     Compact = true,
-    Value = { Min = 50, Max = 120, Default = 70 },
+    Value = { Min = 50, Max = 240, Default = 70 },
     Callback = function(value)
         Services.Workspace.CurrentCamera.FieldOfView = value
     end,
@@ -1964,7 +1964,7 @@ Tabs.CombatTab:Divider()
 
 -- Enhanced Aimbot
 Tabs.CombatTab:Toggle({
-    Title = '🎯 Aimlock (Torso)',
+    Title = '🎯 Aimlock (head)',
     Compact = true,
     Callback = function(state)
         getgenv().AimlockEnabled = state
@@ -1996,8 +1996,8 @@ Tabs.CombatTab:Toggle({
                     if getgenv().AimlockEnabled then
                         local murderer = FindMurderer()
                         if murderer and murderer.Character then
-                            local torso = murderer.Character:FindFirstChild('HumanoidRootPart')
-                            if torso then
+                            local head = murderer.Character:FindFirstChild('HumanoidRootPart')
+                            if head then
                                 -- Smooth camera lock onto torso
                                 Camera.CFrame = CFrame.new(Camera.CFrame.Position, torso.Position)
                             end
